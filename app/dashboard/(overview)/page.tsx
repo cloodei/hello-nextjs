@@ -7,19 +7,19 @@ import { RevenueChartSkeleton, LatestInvoicesSkeleton, CardsSkeleton } from '@/a
 export default async function Page() {
   return (
     <main>
-      <h1 className={`mb-4 text-xl md:text-2xl lg`}>
+      <h1 className={`mb-4 text-3xl md:text-2xl lg`}>
         Dashboard
       </h1>
       <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4 lg:p-1">
-        <Suspense fallback={<CardsSkeleton />}>
+        <Suspense fallback={<CardsSkeleton />} >
           <CardWrapper />
         </Suspense>
       </div>
       <div className="mt-6 grid grid-cols-1 gap-6 md:grid-cols-4 lg:grid-cols-8">
-        <Suspense fallback={<RevenueChartSkeleton />}>
+        <Suspense fallback={<RevenueChartSkeleton />} >
           <RevenueChart />
         </Suspense>
-        <Suspense fallback={<LatestInvoicesSkeleton />}>
+        <Suspense fallback={<LatestInvoicesSkeleton />} >
           <LatestInvoices></LatestInvoices>
         </Suspense>
       </div>
