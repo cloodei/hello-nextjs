@@ -22,10 +22,10 @@ export default async function RevenueChart() {
       <h2 className={`mb-4 text-xl md:text-2xl text-[#d6e0e0]`}>
         Recent Revenue
       </h2>
-      <div className="rounded-xl bg-gray-50 p-4">
-        <div className="sm:grid-cols-13 mt-0 grid grid-cols-12 items-end gap-2 rounded-md bg-white p-4 md:gap-4">
+      <div className="rounded-xl p-4 bg-[#171624] border border-solid border-[#6a648f]">
+        <div className="sm:grid-cols-13 mt-0 grid grid-cols-12 items-end gap-2 rounded-md p-4 ps-3 md:gap-4 bg-[#171624]">
           <div
-            className="mb-6 hidden flex-col justify-between text-sm text-gray-400 sm:flex"
+            className="mb-6 hidden flex-col justify-between text-sm sm:flex me-1 text-[#d6e0e0]"
             style={{ height: `${chartHeight}px` }}
           >
             {yAxisLabels.map((label) => (
@@ -41,15 +41,15 @@ export default async function RevenueChart() {
                   height: `${(chartHeight / topLabel) * month.revenue}px`,
                 }}
               ></div>
-              <p className="-rotate-90 text-sm text-gray-400 sm:rotate-0">
+              <p className="-rotate-90 text-sm text-[#ccd9da] sm:rotate-0">
                 {month.month}
               </p>
             </div>
           ))}
         </div>
-        <div className="flex items-center pb-2 pt-6">
-          <CalendarIcon className="h-5 w-5 text-gray-500" />
-          <h3 className="ml-2 text-sm text-gray-500 ">Last 12 months</h3>
+        <div className="flex items-center pb-2 pt-6 text-[#ccd9da]">
+          <CalendarIcon className="h-5 w-5" />
+          <h3 className="ml-2 text-sm ">Last 12 months</h3>
         </div>
       </div>
     </div>

@@ -9,6 +9,7 @@ import { Button } from './button';
 import { useActionState } from 'react';
 import { authenticate } from '@/app/lib/actions';
 import { PopoverButton } from './button';
+import styles from '@/app/ui/home.module.css';
 
 export default function LoginForm() {
   const [errorMessage, formAction, isPending] = useActionState(authenticate, undefined);
@@ -63,7 +64,7 @@ export default function LoginForm() {
           </div>
         </div>
         <PopoverButton />
-        <Button className="mt-4 w-full my-3 bg-[#161b33] border border-solid border-[#5c7985] text-gray-50" aria-disabled={isPending}>
+        <Button className={`mt-4 w-full my-3 border border-solid border-[#5c7985] text-gray-50 ` + styles.loginBtn} aria-disabled={isPending}>
           <i className="fa-regular fa-user me-[10px]"></i>
           Log in
           <ArrowRightIcon className="ml-auto h-5 w-5 text-gray-50" />

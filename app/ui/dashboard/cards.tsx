@@ -47,16 +47,17 @@ export function Card({
   const Icon = iconMap[type];
 
   return (
-    <div className="rounded-xl bg-gray-200 p-2 shadow-sm">
+    <div className="rounded-xl p-3 pt-1 shadow-sm bg-[#2d2f3a] text-[#d6e0e0] border border-solid border-[#6a648f] hover:scale-110" style={{ boxShadow: 'rgba(63, 63, 87, 0.85) 0px 12px 44px, rgba(63, 63, 87, 0.85) 0px 12px 18px', transition: '0.25s ease' }}>
       <div className="flex p-4">
-        {Icon ? <Icon className="h-5 w-5 text-gray-900" /> : null}
+        {Icon ? <Icon className="h-5 w-5" /> : null}
         <h3 className="ml-2 text-sm font-medium">{title}</h3>
       </div>
       <p
-        className={`truncate rounded-xl bg-slate-100 px-4 py-8 text-center text-2xl`}
+        className={`truncate rounded-xl px-4 py-8 text-center text-2xl bg-[#171624] text-[#d6e0e0]`}
       >
         {value}
       </p>
     </div>
   );
 }
+// shadow-[#3f3f57db]

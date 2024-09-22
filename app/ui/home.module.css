@@ -1,11 +1,3 @@
-.shape {
-    height: 0;
-    width: 0;
-    border-bottom: 30px solid black;
-    border-left: 20px solid transparent;
-    border-right: 20px solid transparent;
-}
-
 @keyframes specialBG {
     0% {
         background-position: 0% 0%;
@@ -16,10 +8,10 @@
 }
 
 .backgroundRepeating {
-    background: linear-gradient(to top, rgba(255, 23, 104, 0.849) 0%, rgba(0, 255, 221, 0.856) 33%, rgba(255, 23, 104, 0.849) 66%, rgba(0, 255, 221, 0.856) 100%);
+    background: linear-gradient(to top, rgba(255, 23, 104, 0.7) 0%, rgba(0, 255, 221, 0.69) 33%, rgba(255, 23, 104, 0.7) 66%, rgba(0, 255, 221, 0.69) 100%);
     min-height: 100vh;
-    background-size: 600% 600%;
-    animation: specialBG 2.5s infinite linear;
+    background-size: 300% 300%;
+    animation: specialBG 4s infinite linear;
 }
 
 .sideNavRepeating {
@@ -28,4 +20,11 @@
     background-size: 300% 300%;
     animation: specialBG 3s infinite linear;
 }
-/* , rgba(0, 196, 170, 0.85) 100% */
+
+.loginBtn {
+    background-color: #161b33;
+    &:hover {
+        background-color: #28396b;
+        border-color: transparent;
+    }
+}
