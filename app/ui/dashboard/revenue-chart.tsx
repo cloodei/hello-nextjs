@@ -19,7 +19,7 @@ export default async function RevenueChart() {
 
   return (
     <div className="w-full md:col-span-4">
-      <h2 className={`mb-4 text-xl md:text-2xl`}>
+      <h2 className={`mb-4 text-xl md:text-2xl text-[#d6e0e0]`}>
         Recent Revenue
       </h2>
       <div className="rounded-xl bg-gray-50 p-4">

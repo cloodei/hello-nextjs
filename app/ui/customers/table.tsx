@@ -1,26 +1,20 @@
 import Image from 'next/image';
-import { lusitana } from '@/app/ui/fonts';
 import Search from '@/app/ui/search';
-import {
-  CustomersTableType,
-  FormattedCustomersTable,
-} from '@/app/lib/definitions';
+import { fetchFilteredCustomers } from '@/app/lib/data';
 
-export default async function CustomersTable({
-  customers,
-}: {
-  customers: FormattedCustomersTable[];
-}) {
+export default async function CustomersTable({ query }: { query: string }) {
+  const customers = await fetchFilteredCustomers(query);
+
   return (
-    <div className="w-full">
-      <h1 className={`${lusitana.className} mb-8 text-xl md:text-2xl`}>
+    <div className="w-full p-6 md:p-12">
+      <h1 className={`mb-8 text-xl md:text-2xl`}>
         Customers
       </h1>
       <Search placeholder="Search customers..." />
       <div className="mt-6 flow-root">
         <div className="overflow-x-auto">
           <div className="inline-block min-w-full align-middle">
-            <div className="overflow-hidden rounded-md bg-gray-50 p-2 md:pt-0">
+            <div className="overflow-hidden rounded-md bg-[#f1f2ff] p-4 pt-1 md:pt-0">
               <div className="md:hidden">
                 {customers?.map((customer) => (
                   <div
@@ -33,10 +27,10 @@ export default async function CustomersTable({
                           <div className="flex items-center gap-3">
                             <Image
                               src={customer.image_url}
-                              className="rounded-full"
+                              className="object-cover rounded-full"
                               alt={`${customer.name}'s profile picture`}
-                              width={28}
-                              height={28}
+                              width={32}
+                              height={32}
                             />
                             <p>{customer.name}</p>
                           </div>
@@ -63,7 +57,7 @@ export default async function CustomersTable({
                 ))}
               </div>
               <table className="hidden min-w-full rounded-md text-gray-900 md:table">
-                <thead className="rounded-md bg-gray-50 text-left text-sm font-normal">
+                <thead className="rounded-md bg-[#f1f2ff] text-left text-sm font-normal">
                   <tr>
                     <th scope="col" className="px-4 py-5 font-medium sm:pl-6">
                       Name
@@ -90,10 +84,10 @@ export default async function CustomersTable({
                         <div className="flex items-center gap-3">
                           <Image
                             src={customer.image_url}
-                            className="rounded-full"
+                            className="object-cover rounded-full"
                             alt={`${customer.name}'s profile picture`}
-                            width={28}
-                            height={28}
+                            width={44}
+                            height={44}
                           />
                           <p>{customer.name}</p>
                         </div>

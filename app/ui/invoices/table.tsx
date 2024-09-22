@@ -16,7 +16,7 @@ export default async function InvoicesTable({
   return (
     <div className="mt-6 flow-root">
       <div className="inline-block min-w-full align-middle">
-        <div className="rounded-lg bg-indigo-50 p-3 pt-1 md:pt-0">
+        <div className="rounded-lg bg-[#f1f2ff] p-4 pt-1 md:pt-0">
           <div className="md:hidden">
             {invoices?.map((invoice) => (
               <div
@@ -28,7 +28,7 @@ export default async function InvoicesTable({
                     <div className="mb-2 flex items-center">
                       <Image
                         src={invoice.image_url}
-                        className="mr-2 rounded-full"
+                        className="object-cover mr-2 rounded-full"
                         width={28}
                         height={28}
                         alt={`${invoice.name}'s profile picture`}
@@ -87,9 +87,9 @@ export default async function InvoicesTable({
                     <div className="flex items-center gap-3">
                       <Image
                         src={invoice.image_url}
-                        className="rounded-full"
-                        width={28}
-                        height={28}
+                        className="object-cover rounded-full"
+                        width={32}
+                        height={32}
                         alt={`${invoice.name}'s profile picture`}
                       />
                       <p>{invoice.name}</p>
