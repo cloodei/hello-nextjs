@@ -69,13 +69,13 @@ function PaginationNumber({
   isActive: boolean;
 }) {
   const className = clsx(
-    'flex h-10 w-10 items-center justify-center text-sm border border-gray-400 text-gray-400',
+    'flex h-10 w-10 items-center justify-center text-sm border border-gray-400',
     {
       'rounded-l-md': position === 'first' || position === 'single',
       'rounded-r-md': position === 'last' || position === 'single',
-      'z-10 bg-gray-300 text-[#000000] border-blue-600': isActive,
-      'hover:bg-[#bebdee] hover:text-[#1d2324]': !isActive && position !== 'middle',
-      'text-gray-300': position === 'middle',
+      'z-10 bg-gray-200 text-[#000000]': isActive,
+      'hover:bg-[#bebdee] text-gray-400 hover:text-[#1d2324]': !isActive && position !== 'middle',
+      'text-gray-500': position === 'middle',
     },
   );
 
@@ -98,10 +98,10 @@ function PaginationArrow({
   isDisabled?: boolean;
 }) {
   const className = clsx(
-    'flex h-10 w-10 items-center justify-center rounded-md border border-gray-400',
+    'flex h-10 w-10 items-center justify-center rounded-md border',
     {
-      'pointer-events-none border-[#7a7a7a7a] text-[#7a7a7a7a]': isDisabled,
-      'hover:bg-gray-200 text-gray-200 hover:text-gray-900': !isDisabled,
+      'pointer-events-none': isDisabled,
+      'hover:bg-gray-200 hover:text-gray-900': !isDisabled,
       'mr-2 md:mr-4': direction === 'left',
       'ml-2 md:ml-4': direction === 'right',
     },
@@ -115,9 +115,9 @@ function PaginationArrow({
     );
 
   return isDisabled ? (
-    <div className={className}>{icon}</div>
+    <div className={className + ` border-[#7a7a7a7a] text-[#7a7a7a7a]`}>{icon}</div>
   ) : (
-    <Link className={className} href={href}>
+    <Link className={`border-gray-400 text-gray-200 ` + className} href={href}>
       {icon}
     </Link>
   );
