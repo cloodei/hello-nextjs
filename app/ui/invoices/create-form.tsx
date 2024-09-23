@@ -17,9 +17,9 @@ export default function Form({ customers }: { customers: CustomerField[] }) {
 
   return (
     <form action={formAction}>
-      <div className="rounded-md bg-teal-50 p-4 md:p-6">
+      <div className="rounded-md p-4 md:p-6">
         <div className="mb-4">
-          <label htmlFor="customer" className="mb-2 block text-sm font-medium">
+          <label htmlFor="customer" className="mb-2 block text-sm font-medium text-gray-200">
             Choose customer
           </label>
           <div className="relative">
@@ -53,7 +53,7 @@ export default function Form({ customers }: { customers: CustomerField[] }) {
         </div>
 
         <div className="mb-4">
-          <label htmlFor="amount" className="mb-2 block text-sm font-medium">
+          <label htmlFor="amount" className="mb-2 block text-sm font-medium text-gray-200">
             Choose an amount
           </label>
           <div className="relative mt-2 rounded-md">
@@ -81,7 +81,7 @@ export default function Form({ customers }: { customers: CustomerField[] }) {
         </div>
 
         <fieldset>
-          <legend className="mb-2 block text-sm font-medium">
+          <legend className="mb-2 block text-sm font-medium text-gray-200">
             Set the invoice status
           </legend>
           <div className="rounded-md border border-gray-300 bg-white px-[14px] py-3">

@@ -6,7 +6,7 @@ export function CreateInvoice() {
   return (
     <Link
       href="/dashboard/invoices/create"
-      className="flex h-10 items-center rounded-lg bg-blue-600 px-4 text-sm font-medium text-white transition-colors hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
+      className="flex h-10 items-center rounded-lg px-4 text-sm font-medium transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#494b9c98] bg-[#4244c298] text-[#cdffff] hover:bg-[#cdffff] hover:text-[#2d2e66]"
     >
       <span className="hidden md:block">Create Invoice</span>{' '}
       <PlusIcon className="h-5 md:ml-4" />
@@ -18,7 +18,7 @@ export function UpdateInvoice({ id }: { id: string }) {
   return (
     <Link
       href={`/dashboard/invoices/${id}/edit`}
-      className="rounded-md border p-2 bg-teal-300 hover:bg-teal-600"
+      className="rounded-md border p-2 border-[#9ea0bbcb] text-[#a4a6bb] bg-teal-950 hover:bg-teal-400 hover:text-[#fff]"
     >
       <PencilIcon className="w-5" />
     </Link>
@@ -31,7 +31,7 @@ export function DeleteInvoice({ id }: { id: string }) {
   return (
     // hover:bg-gray-100 (for btns)
     <form action={deleteInvoiceWithId}>
-      <button className="rounded-md border p-2 bg-red-400 hover:bg-red-700">
+      <button className="rounded-md border p-2 border-[#9ea0bbcb] text-[#a4a6bb] bg-red-950 hover:bg-red-400 hover:text-[#fff]">
         <span className="sr-only">Delete</span>
         <TrashIcon className="w-5" />
       </button>

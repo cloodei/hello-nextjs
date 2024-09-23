@@ -23,7 +23,7 @@ export default async function RevenueChart() {
         Recent Revenue
       </h2>
       <div className="rounded-xl p-4 bg-[#171624] border border-solid border-[#6a648f]">
-        <div className="sm:grid-cols-13 mt-0 grid grid-cols-12 items-end gap-2 rounded-md p-4 ps-3 md:gap-4 bg-[#171624]">
+        <div className="sm:grid-cols-13 mt-0 grid grid-cols-12 items-end gap-2 rounded-md p-4 ps-3 md:gap-4">
           <div
             className="mb-6 hidden flex-col justify-between text-sm sm:flex me-1 text-[#d6e0e0]"
             style={{ height: `${chartHeight}px` }}

@@ -22,13 +22,19 @@ export default function EditInvoiceForm({
   const initialState: State = { message: null, errors: {} };
   const updateInvoiceWithId = updateInvoice.bind(null, invoice.id);
   const [state, formAction] = useActionState(updateInvoiceWithId, initialState);
+  const currentCustomer = customers.find((customer) => customer.id === invoice.customer_id);
 
   return (
     <form action={formAction}>
-      <div className="rounded-md bg-teal-50 p-4 md:p-6">
-        {/* Customer Name */}
+      <div className="rounded-md p-4 pt-0 md:p-6 md:pt-0">
+        {currentCustomer && (
+          <h1 className={`mb-5 text-xl md:text-2xl md:mb-9 text-center text-[#d5fcfc]`}>
+            <i className="fa-solid fa-user-pen me-[9px]"></i>
+            Editing invoice of: {currentCustomer.name}
+          </h1>
+        )}
         <div className="mb-4">
-          <label htmlFor="customer" className="mb-2 block text-sm font-medium">
+          <label htmlFor="customer" className="mb-2 block text-sm font-medium text-gray-200">
             Choose customer
           </label>
           <div className="relative">
@@ -63,7 +69,7 @@ export default function EditInvoiceForm({
 
         {/* Invoice Amount */}
         <div className="mb-4">
-          <label htmlFor="amount" className="mb-2 block text-sm font-medium">
+          <label htmlFor="amount" className="mb-2 block text-sm font-medium text-gray-200">
             Choose an amount
           </label>
           <div className="relative mt-2 rounded-md">
@@ -94,7 +100,7 @@ export default function EditInvoiceForm({
 
         {/* Invoice Status */}
         <fieldset>
-          <legend className="mb-2 block text-sm font-medium">
+          <legend className="mb-2 block text-sm font-medium text-gray-200">
             Set the invoice status
           </legend>
           <div className="rounded-md border border-gray-300 bg-white px-[14px] py-3">

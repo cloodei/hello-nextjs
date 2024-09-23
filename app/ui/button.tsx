@@ -23,7 +23,7 @@ export function PopoverButton() {
   return (
     <Popover>
       <PopoverTrigger>
-        <button className="bg-transparent text-sky-200 px-2 py-1 transition hover:text-violet-600 hover:scale-[1.13]">
+        <button className="bg-transparent text-sky-200 px-2 pb-2 transition hover:text-violet-600 hover:scale-[1.13]">
           Gợi ý :)
         </button>
       </PopoverTrigger>

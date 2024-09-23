@@ -1,6 +1,5 @@
 import CustomersTable from "@/app/ui/customers/table";
-import { Button } from '@/app/ui/button';
-import { fetchFilteredCustomers } from "@/app/lib/data";
+import styles from '@/app/ui/nightStar.module.css';
 
 export default async function Page({
     searchParams,
@@ -12,6 +11,8 @@ export default async function Page({
     const query = searchParams?.query || '';
 
     return (
+    <main className={styles.nightBG} style={{ minHeight: '100vh' }}>
         <CustomersTable query={query} />
+    </main>
     )
 }

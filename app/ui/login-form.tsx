@@ -20,7 +20,7 @@ export default function LoginForm() {
         <h1 className={`mb-3 text-2xl text-sky-200`}>
           Logging in...
         </h1>
-        <div className="w-full mb-3">
+        <div className="w-full mb-1">
           <div>
             <label
               className="mb-3 mt-5 block text-xs font-medium text-sky-200"
@@ -30,12 +30,12 @@ export default function LoginForm() {
             </label>
             <div className="relative">
               <input
-                className="peer block rounded-md border border-gray-500 w-full text-slate-50 py-[10px] pl-10 text-sm placeholder:text-sky-100"
+                className="peer block rounded-md border border-gray-500 w-full py-[10px] pl-10 text-sm placeholder:text-sky-100"
                 id="email"
                 type="email"
                 name="email"
                 placeholder="Enter your email address"
-                style={{ backgroundColor: '#161131' }}
+                style={{ backgroundColor: '#161131 !important', color: 'rgb(248, 250, 252) !important' }}
                 required
               />
               <AtSymbolIcon className="pointer-events-none absolute left-3 top-1/2 h-[18px] w-[18px] -translate-y-1/2 text-gray-50 peer-focus:text-gray-100" />
@@ -50,12 +50,12 @@ export default function LoginForm() {
             </label>
             <div className="relative">
               <input
-                className="peer block rounded-md border border-gray-500 w-full text-slate-50 py-[10px] pl-10 text-sm placeholder:text-sky-100"
+                className="peer block rounded-md border border-gray-500 w-full py-[10px] pl-10 text-sm placeholder:text-sky-100"
                 id="password"
                 type="password"
                 name="password"
                 placeholder="Enter password"
-                style={{ backgroundColor: '#161131' }}
+                style={{ backgroundColor: '#161131 !important', color: 'rgb(248, 250, 252) !important' }}
                 required
                 minLength={6}
               />

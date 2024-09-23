@@ -5,6 +5,7 @@ import { CreateInvoice } from '@/app/ui/invoices/buttons';
 import { InvoicesTableSkeleton } from '@/app/ui/skeletons';
 import { Suspense } from 'react';
 import { fetchInvoicesPages } from '@/app/lib/data';
+import styles from '@/app/ui/nightStar.module.css';
 
 export default async function Page({
   searchParams,
@@ -19,9 +20,9 @@ export default async function Page({
   const totalPages = await fetchInvoicesPages(query);
   
   return (
-    <div className="w-full p-6 md:p-12">
+    <div className={`w-full p-6 md:p-12 ` + styles.nightBG} style={{ minHeight: '100vh' }}>
       <div className="flex w-full items-center justify-between">
-        <h1 className={`text-2xl`}>Invoices</h1>
+        <h1 className={`text-2xl text-[#d6e0e0]`}>Invoices</h1>
       </div>
       <div className="mt-4 flex items-center justify-between gap-2 md:mt-8">
         <Search placeholder="Search invoices..." />

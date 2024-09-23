@@ -10,7 +10,7 @@
 }
 
 .nightBG {
-    background: radial-gradient(ellipse at bottom, #223244 0%, #0c0e14 100%);
+  background: linear-gradient(to top, #263350 0%, #151322 100%);
 }
   
 .night {
